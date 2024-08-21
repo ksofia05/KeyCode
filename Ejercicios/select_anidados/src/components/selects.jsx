@@ -1,5 +1,11 @@
+import { SelectList } from "./SelectList";
+
 export const Selects = () => {
-    return (
-        <p>Hola, soy select x2</p>
-    )
-}
+  return (
+    <>
+      <SelectList title = "Estados"/>
+      <SelectList title = "Municipios"/>
+      <SelectList title = "Ciudades"/>
+    </>
+  );
+};
