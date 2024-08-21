@@ -3,9 +3,9 @@ import { SelectList } from "./SelectList";
 export const Selects = () => {
   return (
     <>
-      <SelectList title = "Estados"/>
-      <SelectList title = "Municipios"/>
-      <SelectList title = "Ciudades"/>
+      <SelectList title = "Estado "/>
+      <SelectList title = " Municipio "/>
+      <SelectList title = " Ciudad "/>
     </>
-  );
+  )
 };
