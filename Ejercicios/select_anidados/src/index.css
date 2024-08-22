@@ -17,7 +17,6 @@ body {
     margin-bottom: 16px;
   }
   
-  /* Estilo para el contenedor principal */
   .container-app {
     text-align: center;
     padding: 20px;
@@ -27,21 +26,18 @@ body {
     width: 25rem;
   }
   
-  /* Título principal */
   h1 {
     font-size: 28px;
     color: #8800ff;
     margin-bottom: 10px;
   }
   
-  /* Subtítulo */
   p {
     font-size: 18px;
     color: #252525d4;
     margin-bottom: 20px;
   }
   
-  /* Estilo de la línea horizontal */
   hr {
     border: 0;
     height: 1px;
@@ -49,7 +45,6 @@ body {
     margin-bottom: 30px;
   }
   
-  /* Contenedor principal */
   .container {
     max-width: 600px;
     margin: 0 auto;
@@ -59,12 +54,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Estilo para el contenedor de cada select */
   .container-select {
     margin-bottom: 20px;
   }
   
-  /* Etiqueta de los selects */
   .label-select {
     font-family: "Poppins";
     display: block;
@@ -74,7 +67,6 @@ body {
     font-weight: 600;
   }
   
-  /* Estilo de los selects */
   select {
     width: 100%;
     padding: 10px;
@@ -86,25 +78,21 @@ body {
     transition: border-color 0.3s ease;
   }
   
-  /* Estilo al enfocar el select */
   select:focus {
     border-color: rgb(7, 234, 255);
     outline: none;
   }
   
-  /* Opción predeterminada */
   option {
     color: #676767;
   }
   
-  /* Estilo de los mensajes de error */
   .error-message {
     color: #dc3545;
     font-size: 14px;
     margin-top: 5px;
   }
   
-  /* Spinner de carga */
   .spinner {
     display: block;
     margin: 0 auto;
@@ -116,7 +104,6 @@ body {
     animation: spin 1s linear infinite;
   }
   
-  /* Animación del spinner */
   @keyframes spin {
     0% {
       transform: rotate(0deg);

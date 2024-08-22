@@ -9,7 +9,6 @@ export const Selects = () => {
   console.log('Departamento ID', departamentos)
   console.log('Municipio ID', municipios)
 
-  // Efecto para obtener la información de la ciudad
   useEffect(() => {
     if (municipios) {
       fetch(`https://api-colombia.com/api/v1/City/${municipios}`)
@@ -36,7 +35,7 @@ export const Selects = () => {
         }}
       />
 
-      {/* Mostrar la información de la ciudad */}
+
       {ciudadInfo && (
         <div className="ciudad-info">
           <h3>Información de la Ciudad</h3>
