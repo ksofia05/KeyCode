@@ -1,16 +1,15 @@
-
-import './App.css'
-import { Selects } from './components/selects'
+import { useState } from "react";
+import { Selects } from "./components/selects";
 
 const App = () => {
   return (
-    <div>
+    <div className="container-app">
       <h1>Aprendizaje React</h1>
-      <p>Selects anidados</p>
-      {/* SelectAnidades*/}
-      <Selects/>
+      <p>Selects Anidados</p>
+      <hr />
+      <Selects />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
