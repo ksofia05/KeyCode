@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const useForms = (valorDefecto, validaciones) => {
-  //Estado para contenido del formulario
+  //Este esta tiene el contenido del form 
   const [form, setForm] = useState(valorDefecto);
   //Estado para almacenar los errores
   const [errores, setErrores] = useState({});
@@ -22,7 +22,7 @@ export const useForms = (valorDefecto, validaciones) => {
     });
   };
 
-  //Funcion para validar los datos previos al envio cuando me salgo del input o doy clic afuera
+  //Funcion que valida los datos previos al envio cuando me salgo del input o doy clic afuera
   const manejadorSalidaInput = (element) => {
     manejadorCambios(element);
     //Valido el contenido de mi form, y si hay un error, lo guardo en el estado errors
