@@ -1,35 +1,70 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+/** Archivo de barril que contiene todas mis paginas */
+import {
+  Acerca,
+  Error404,
+  Home,
+  Productos,
+  ProductosDetalle,
+  Servicios,
+} from "./pages";
+import Menu from "./components/Menu";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [productos, setProductos] = useState([
+    {
+      id: 1,
+      nombre: "Carne",
+      precio: 100,
+    },
+    {
+      id: 2,
+      nombre: "Cebolla",
+      precio: 200,
+    },
+    {
+      id: 3,
+      nombre: "Pollo",
+      precio: 300,
+    },
+    {
+      id: 4,
+      nombre: "Papa",
+      precio: 400,
+    },
+  ]);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* Enrutador general */}
+      <BrowserRouter>
+        <h1>Hola Mundo React Router Dom</h1>
+        {/* Componente Menu */}
+        <Menu />
+        {/* Contenedor de rutas */}
+        <Routes>
+          {/* Rutas individuales */}
+          <Route path="/" element={<Home />} />
+          <Route path="/acerca" element={<Acerca />} />
+          {/* Pagina de productos generales */}
+          <Route
+            path="/productos"
+            element={<Productos productos={productos} />}
+          />
+          {/* Pagina individual del producto */}
+          <Route
+            path="/productos/:id"
+            element={<ProductosDetalle productos={productos} />}
+          />
+          <Route path="/servicios" element={<Servicios />} />
+          {/* Ruta de error */}
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
