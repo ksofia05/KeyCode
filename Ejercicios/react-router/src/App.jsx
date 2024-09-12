@@ -58,7 +58,9 @@ function App() {
             path="/productos/:id"
             element={<ProductosDetalle productos={productos} />}
           />
-          <Route path="/servicios" element={<Servicios />} />
+          {/*Pagina general del servicios*/}
+          <Route path="/servicios" element={<Servicios />} >
+          </Route>
           {/* Ruta de error */}
           <Route path="*" element={<Error404 />} />
         </Routes>

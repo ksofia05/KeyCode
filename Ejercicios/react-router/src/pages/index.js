@@ -1,4 +1,4 @@
-/** Aqui exporta cada una de las paginas creadas para que quede en una sola linea */
+/**Exporta cada una de las lineas para que quede mas organizado*/
 
 export { Home } from './Home'
 export { Acerca } from './Acerca'
