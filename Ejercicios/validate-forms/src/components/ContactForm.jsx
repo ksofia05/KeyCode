@@ -45,14 +45,14 @@ const ContactForm = () => {
 
 
   return (
-    <div className="justify-start items-start bg-red">
-      <div className="w-full max-w-lg space-y-7 rounded-2xl p-6 shadow-2xl ml-auto">
+    <div className="justify-start items-start">
+      <div className="w-full max-w-lg space-y-10 rounded-2xl p-6 shadow-2xl ml-auto">
         <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center">Formulario de Contacto</h1>
 
         <form onSubmit={enviarFormulario} className="space-y-4">
           {/* Nombre */}
           <div>
-            <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 text-left">Nombre</label>
+            <label htmlFor="nombre" className="block text-sm font-medium text-gray-900 text-left">Nombre</label>
             <input
               type="text"
               name="nombre"
@@ -61,7 +61,7 @@ const ContactForm = () => {
               value={form.nombre}
               onChange={manejadorCambios}
               onBlur={manejadorSalidaInput}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+              className=" placeholder:text-gray-600 mt-1 block w-full p-2 border bg-transparent border-transparent rounded-md shadow-md focus:ring-indigo-500 focus:border-indigo-500 "
             />
             {errores.observaciones && (
             <p className="flex items-center text-sm text-red-600 mt-1">
@@ -74,7 +74,7 @@ const ContactForm = () => {
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 text-left">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-900 text-left">Email</label>
             <input
               type="email"
               name="email"
@@ -83,8 +83,7 @@ const ContactForm = () => {
               value={form.email}
               onChange={manejadorCambios}
               onBlur={manejadorSalidaInput}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-            />
+              className="placeholder:text-gray-600 mt-1 block w-full p-2 border bg-transparent border-transparent rounded-md shadow-md focus:ring-indigo-500 focus:border-indigo-500"            />
             {errores.observaciones && (
             <p className="flex items-center text-sm text-red-600 mt-1">
               <i className="fa-solid fa-circle-exclamation mr-2"></i>
@@ -96,7 +95,7 @@ const ContactForm = () => {
 
           {/* Asunto */}
           <div>
-            <label htmlFor="asunto" className="block text-sm font-medium text-gray-700 text-left">Asunto</label>
+            <label htmlFor="asunto" className="block text-sm font-medium text-gray-900 text-left">Asunto</label>
             <input
               type="text"
               name="asunto"
@@ -105,7 +104,7 @@ const ContactForm = () => {
               value={form.asunto}
               onChange={manejadorCambios}
               onBlur={manejadorSalidaInput}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+              className="placeholder:text-gray-600 mt-1 block w-full p-2 border bg-transparent border-transparent rounded-md shadow-md focus:ring-indigo-500 focus:border-indigo-500"
             />
             {errores.observaciones && (
             <p className="flex items-center text-sm text-red-600 mt-1">
@@ -117,7 +116,7 @@ const ContactForm = () => {
 
           {/* Observaciones */}
           <div>
-            <label htmlFor="observaciones" className="block text-sm font-medium text-gray-700 text-left">Observaciones</label>
+            <label htmlFor="observaciones" className="block text-sm font-medium text-gray-900 text-left">Observaciones</label>
             <textarea
               name="observaciones"
               id="observaciones"
@@ -127,7 +126,7 @@ const ContactForm = () => {
               value={form.observaciones}
               onChange={manejadorCambios}
               onBlur={manejadorSalidaInput}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+              className="placeholder:text-gray-600 mt-1 block w-full p-2 border bg-transparent border-transparent rounded-md shadow-md focus:ring-indigo-500 focus:border-indigo-500"
             />
             {errores.observaciones && (
             <p className="flex items-center text-sm text-red-600 mt-1">
