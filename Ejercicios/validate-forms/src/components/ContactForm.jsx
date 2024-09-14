@@ -42,9 +42,11 @@ const ContactForm = () => {
     validaciones
   );
 
+
+
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="w-full max-w-lg space-y-7 border border-gray-300 p-6 rounded-lg shadow-md bg-white">
+    <div className="justify-start items-start bg-red">
+      <div className="w-full max-w-lg space-y-7 rounded-2xl p-6 shadow-2xl ml-auto">
         <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center">Formulario de Contacto</h1>
 
         <form onSubmit={enviarFormulario} className="space-y-4">
@@ -61,15 +63,13 @@ const ContactForm = () => {
               onBlur={manejadorSalidaInput}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
-            {errores.nombre && (
-              <p className="flex items-center text-sm text-red-600 mt-1">
-                {/* Ícono de advertencia */}
-                <svg className="h-5 w-5 text-red-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a1 1 0 001-1v-1a1 1 0 00-2 0v1a1 1 0 001 1zm0-3a1 1 0 00.707-.293l4-4a1 1 0 00-1.414-1.414L10 13.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4A1 1 0 0010 15z" clipRule="evenodd" />
-                </svg>
-                {errores.nombre}
-              </p>
-            )}
+            {errores.observaciones && (
+            <p className="flex items-center text-sm text-red-600 mt-1">
+              <i className="fa-solid fa-circle-exclamation mr-2"></i>
+              {errores.observaciones}
+            </p>
+          )}
+
           </div>
 
           {/* Email */}
@@ -85,14 +85,13 @@ const ContactForm = () => {
               onBlur={manejadorSalidaInput}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
-            {errores.email && (
-              <p className="flex items-center text-sm text-red-600 mt-1">
-                <svg className="h-5 w-5 text-red-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a1 1 0 001-1v-1a1 1 0 00-2 0v1a1 1 0 001 1zm0-3a1 1 0 00.707-.293l4-4a1 1 0 00-1.414-1.414L10 13.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4A1 1 0 0010 15z" clipRule="evenodd" />
-                </svg>
-                {errores.email}
-              </p>
-            )}
+            {errores.observaciones && (
+            <p className="flex items-center text-sm text-red-600 mt-1">
+              <i className="fa-solid fa-circle-exclamation mr-2"></i>
+              {errores.observaciones}
+            </p>
+          )}
+
           </div>
 
           {/* Asunto */}
@@ -108,14 +107,12 @@ const ContactForm = () => {
               onBlur={manejadorSalidaInput}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
-            {errores.asunto && (
-              <p className="flex items-center text-sm text-red-600 mt-1">
-                <svg className="h-5 w-5 text-red-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a1 1 0 001-1v-1a1 1 0 00-2 0v1a1 1 0 001 1zm0-3a1 1 0 00.707-.293l4-4a1 1 0 00-1.414-1.414L10 13.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4A1 1 0 0010 15z" clipRule="evenodd" />
-                </svg>
-                {errores.asunto}
-              </p>
-            )}
+            {errores.observaciones && (
+            <p className="flex items-center text-sm text-red-600 mt-1">
+              <i className="fa-solid fa-circle-exclamation mr-2"></i>
+              {errores.observaciones}
+            </p>
+          )}
           </div>
 
           {/* Observaciones */}
@@ -133,13 +130,12 @@ const ContactForm = () => {
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
             {errores.observaciones && (
-              <p className="flex items-center text-sm text-red-600 mt-1">
-                <svg className="h-5 w-5 text-red-600 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a1 1 0 001-1v-1a1 1 0 00-2 0v1a1 1 0 001 1zm0-3a1 1 0 00.707-.293l4-4a1 1 0 00-1.414-1.414L10 13.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4A1 1 0 0010 15z" clipRule="evenodd" />
-                </svg>
-                {errores.observaciones}
-              </p>
-            )}
+            <p className="flex items-center text-sm text-red-600 mt-1">
+              <i className="fa-solid fa-circle-exclamation mr-2"></i>
+              {errores.observaciones}
+            </p>
+          )}
+
           </div>
 
           {/* Submit Button */}
