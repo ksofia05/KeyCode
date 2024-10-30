@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton - Karen Lizcano</title>
+    <style>
+        .caracter {
+            display: inline-block; 
+            position: relative;
+            margin: 0 2px;
+        }
+        .caracter span {
+            position: absolute;
+            top: -20px; 
+            left: 0;
+            font-size: 12px;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conectar JavaScript a HTML</h1>
+    <p id="resultado"></p>
+
+    <script>
+        const textoCifrado = "^[()`~^*/?`[()^+`-~()#[$()/~()%\\[]()}+[()[{=~¿()=$?%?!?]¡~()¿()`¬^~()[{=~()?+^[]=?()^\\{()*~¡[$[{()¡[()?=[]`\\¬]()¿()[{;+[$_~()`~]=\\]+~"; // Asegúrate de que la cadena esté correctamente cerrada.
+
+        const sustituciones = {
+            '^': 'm',
+            '(': '-',
+            ')': '-',
+            '?': 'a',
+            '[': 'e',
+            '\\': 'i',
+            '~': 'o',
+            '*': 'p',
+            '/': 'l',
+            '+': 'u',
+            '`': 'c',
+            '-': 'h',
+            '#': 'v',
+            '$': 'r',
+            '%': 'b',
+            ']': 'n',
+            '{': 's',
+            '}': 'q',
+            '=': 't',
+            '¡': 'd',
+            '¿': 'y',
+            '¬': 'ó',
+            '_': 'z',
+            ';': 'f',
+            '!': 'j'
+        };
+
+        function descifrar(texto) {
+            let textoDescifrado = '';
+
+            for (let caracter of texto) {
+                if (sustituciones[caracter]) {
+                    const letraDescifrada = sustituciones[caracter];
+                    textoDescifrado += `<span class="caracter">${letraDescifrada}<span>${caracter}</span></span>`;
+                } else {
+                    textoDescifrado += `<span class="caracter">${caracter}<span>${caracter}</span></span>`;
+                }
+            }
+
+            return textoDescifrado;
+        }
+
+        const resultado = descifrar(textoCifrado);
+        document.getElementById('resultado').innerHTML = resultado;
+    </script>
+</body>
+</html>
